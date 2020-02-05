@@ -1,5 +1,3 @@
-import { createElement } from "react";
-
 const root = document.getElementById('root');
 
 // Se generan y se muestran las casillas, se genera el tablero
