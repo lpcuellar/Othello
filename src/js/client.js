@@ -3,8 +3,8 @@ const root = document.getElementById('root');
 // Se generan y se muestran las casillas, se genera el tablero
 const renderBoard = (turn, state, i, j) => {
     const board = document.createElement('div');
-    board.style.width = '60px';
-    board.style.height = '60px';
+    board.style.width = '55px';
+    board.style.height = '55px';
     board.style.backgroundColor = 'green';
     board.style.borderColor = 'darkgreen';
     board.style.borderWidth = '2px';
@@ -20,8 +20,8 @@ const renderBoard = (turn, state, i, j) => {
 // Se generan las fichas de ambos jugadores y los botones de los posibles movimientos
 const renderDisc = (turn, state, i, j) => {
     const disc = state === 1 || state === 2 ? document.createElement('div') : document.createElement('button');
-    disc.style.height = '50px';
-    disc.style.width = '50px';
+    disc.style.height = '45px';
+    disc.style.width = '45px';
     disc.style.borderRadius = '50%';
     disc.style.borderStyle = 'solid';
     disc.style.borderWidth = '2px';
@@ -174,8 +174,8 @@ const render = (mount, state) => {
     const { grid } = state;
 
     const gameTable = document.createElement('div');
-    gameTable.style.width = '512px';
-    gameTable.style.height = '512px';
+    gameTable.style.width = '472px';
+    gameTable.style.height = '472px';
     gameTable.style.backgroundColor = 'black';
     gameTable.style.alignItems = 'center';
     gameTable.style.display = 'flex';
@@ -214,14 +214,13 @@ const render = (mount, state) => {
     mount.style.justifyContent = 'center';
     mount.style.display = 'flex';
     mount.style.flexDirection = 'column';
-    mount.style.padding = ' 20px';
 
     // Se crea el título del juego
     const title = document.createElement('h1');
     title.style.color = '#ffffff';
     title.textContent = 'OTHELLO';
     title.style.fontFamily = "Arial, Helvetica, sans-serif";
-    title.style.fontSize = '48px';
+    title.style.fontSize = '44px';
 
     // Se crea un flex para que contenga toda la información del marcador
     const score = document.createElement('div');
@@ -229,8 +228,7 @@ const render = (mount, state) => {
     score.style.flexDirection = ' row';
     score.style.justifyContent = 'center';
     score.style.alignItems = 'center';
-    score.style.marginTop = '16px';
-    score.style.marginBottom = '16px';
+    score.style.marginBottom = '5px';
 
     // Se crea una ficha blanca para acompañar al marcador de las fichas blancas
     const whiteChip = document.createElement('div');
@@ -266,7 +264,7 @@ const render = (mount, state) => {
     const blancas = document.createElement('h2');
     blancas.textContent = "Blancas: " + fichasB + "   ";
     blancas.style.fontFamily = "Arial, Helvetica, sans-serif";
-    blancas.style.fontSize = '24px';
+    blancas.style.fontSize = '18px';
     blancas.style.color = 'white';
     blancas.style.marginRight = '8px';
     score.appendChild(blancas);
@@ -275,7 +273,7 @@ const render = (mount, state) => {
     const negras = document.createElement('h2');
     negras.textContent = "-    " + fichasN + " :Negras";
     negras.style.fontFamily = "Arial, Helvetica, sans-serif";
-    negras.style.fontSize = '24px';
+    negras.style.fontSize = '18px';
     negras.style.color = 'white';
     score.appendChild(negras);
 
